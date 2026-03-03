@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarrant County College - Student Portal</title>
+
+  <!-- CompanyHub Forms Script (load once) -->
+  <script src="https://app.companyhub.com/scripts/companyhub.forms.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #003da5 0%, #005eb8 50%, #0077be 100%);
+      display: block; /* allow page to grow and scroll */
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      max-width: 560px;
+      width: 100%;
+      margin: 0 auto;
+      overflow: visible;
+    }
+
+    .header {
+      background: #fff;
+      color: #003da5;
+      padding: 24px;
+      text-align: center;
+      border-bottom: 3px solid #003da5;
+    }
+
+    .logo-img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+    }
+
+    .login-form { padding: 24px; }
+
+    h2 {
+      color: #003da5;
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .subtitle {
+      color: #666;
+      margin: 0 0 20px;
+      font-size: 14px;
+    }
+
+    /* === Increased form height === */
+    #companyhub-form {
+      width: 100%;
+      min-height: 900px;   /* ← adjust as needed */
+      height: auto;
+      overflow: visible;
+    }
+
+    #companyhub-form iframe {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 900px !important; /* ← match above */
+      border: 0;
+      overflow: visible;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 12px; }
+      .header { padding: 18px; }
+      .login-form { padding: 18px; }
+      h2 { font-size: 22px; }
+
+      /* Make it at least full screen on small devices */
+      #companyhub-form,
+      #companyhub-form iframe {
+        min-height: 100vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <img
+        class="logo-img"
+        alt="TCC - Tarrant County College - Success Within Reach"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3QgmJmByPgWJ6G-S9SKD5M7XfAb0dlns7yQ&s"
+      />
+    </div>
+
+    <div class="login-form">
+      <h2>Welcome Back</h2>
+      <p class="subtitle">Sign in to access your student portal</p>
+      <div id="companyhub-form" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <script>
+    companyhubForms.render(
+      "https://app.companyhub.com/webtolead/renderform/Mjc1MTg1?name=Tarrant_CountyDistrictCollege",
+      "companyhub-form"
+    );
+  </script>
+</body>
+</html>
